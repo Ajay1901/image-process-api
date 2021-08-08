@@ -1,4 +1,4 @@
-import express, { NextFunction } from "express";
+import express from "express";
 
 const routes = express.Router();
 const validateParams = routes.use("/", (req, res, next) => {
@@ -8,7 +8,6 @@ const validateParams = routes.use("/", (req, res, next) => {
   if (!req.query.width) {
     return res.send("Please specify width");
   }
-
   if (!req.query.height) {
     return res.send("Please specify height");
   }
